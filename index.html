@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Valentine</title>
+<style>
+  body {
+    margin:0;
+    padding:0;
+    background:#000;
+    color:#fff;
+    font-family: Arial, sans-serif;
+    text-align:center;
+  }
+  h1 {
+    font-size:3em;
+    margin-top:50px;
+    color:#ff66aa;
+  }
+  button {
+    font-size:2em;
+    margin:20px;
+    padding:15px 40px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#ff0077;
+    color:#fff;
+    transition:0.3s;
+  }
+  button:hover { transform:scale(1.1); }
+  #yesScreen { display:none; margin-top:50px; }
+  #yesScreen img { width:300px; margin-top:20px; border-radius:10px; }
+</style>
+</head>
+<body>
+
+<h1 id="mainTitle">My Valentine</h1>
+<button id="yesBtn">YES</button>
+<button id="noBtn">NO</button>
+
+<div id="yesScreen">
+  <h1>Correct choice Ms Valentine 💖</h1>
+  <img src="https://cdn.pixabay.com/photo/2017/02/14/03/40/cat-2068462_1280.jpg" alt="Cat with Rose">
+</div>
+
+<script>
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+  const yesScreen = document.getElementById('yesScreen');
+  const mainTitle = document.getElementById('mainTitle');
+
+  yesBtn.onclick = () => {
+    mainTitle.style.display = 'none';
+    yesBtn.style.display = 'none';
+    noBtn.style.display = 'none';
+    yesScreen.style.display = 'block';
+  }
+
+  noBtn.onclick = () => {
+    alert("You must choose YES 😗");
+  }
+</script>
+
+</body>
+</html>
